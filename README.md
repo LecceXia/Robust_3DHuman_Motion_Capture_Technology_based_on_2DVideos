@@ -21,6 +21,7 @@
 
 1.  CPM  
 &emsp;When the human body is not in the middle of the screen, it is completely unrecognizable. The reason is that the CPM algorithm model has a prerequisite: assume that the human body to be recognized is in the middle of the screen.  
+  
 2.  DeeperCut
 3.  OpenPose  
 &emsp;Use convolutional neural networks to extract features to get feature maps, and then use CNN to extract partial confidence maps and partial region affinity, and then based on the extracted parts of the feature maps, use the binary matching algorithm model to distinguish different joints of different people and recognize The joint points are connected in the order of each person.  
@@ -36,3 +37,16 @@
 
 ## Motion Data Processing
 &emsp;After comparing the centralized filtering algorithms, including limiting filtering, median filtering, arithmetic average filtering, and median average filtering, the median average filtering has the best optimization effect on the experimental data
+
+## Data Storage
+1.  Using forward dynamics, Rodriguez's rotation formula derives the relationship between position information and rotation matrix
+  
+2.  Using trigonometric functions, matrix-related knowledge finds the Euler angle by rotating the matrix, that is, the BVH format data part is solved
+
+## Future Expectation
+1.  Since this article relies heavily on the results of the first-stage human recognition model, many improvements can be made to the human pose recognition model, such as modifying the underlying function or adding the number of layers of the neural network, thereby improving the accuracy of the extracted 3D human motion data degree.  
+  
+2.  In terms of data processing, motion manifolds can be used to optimize the data, so as to avoid the situation that the data can not participate in the filtering at the beginning and end of the data caused by filtering and denoising.
+  
+3.  BVH format can be further converted into fbx format using software, and then unity3D can be imported to form animation, and finally achieve the purpose of driving the movement of animated characters
+
