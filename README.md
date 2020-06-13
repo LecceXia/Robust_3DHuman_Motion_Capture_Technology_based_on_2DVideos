@@ -6,7 +6,7 @@
 
 3.  Convert json format data to 14*2 mat format data using data.py in the data processing folder
 
-4.  Put mat format data and original pictures into 3DHumanPose-master imgs, run demo.m to get 3D motion data, and then use processings.m to denoise the data, generate each frame of denoised pictures and store as BVH format
+4.  Put mat format data and original pictures into 3DHumanPose-master imgs (https://github.com/flyawaychase/3DHumanPose), run demo.m to get 3D motion data, and then use processings.m to denoise the data, generate each frame of denoised pictures and store as BVH format
 
 5.  Use MP4.m to generate the video in MP4 format
 
