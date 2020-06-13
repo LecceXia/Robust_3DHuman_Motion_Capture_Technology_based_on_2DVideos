@@ -16,3 +16,14 @@
 &emsp;The data set used is divided into two parts. 
 1.  The first part is a series of short-length fitness exercises, including inverted push-ups, inverted wall-climbing, high-five push-ups, one-leg squats, forehand and backhand pull-ups, bobby jumps, and bending Mountain running, V-shaped heads, ground running, etc. These data basically include various special human postures, such as various occlusions, the human body is not in the center of the screen, the human body is in extensive contact with the ground, the human body is inverted, etc. .  
 2.  The second part is the dance movements with a long duration. Because the dance movements are complex and varied, sometimes the fans and ribbons are used to check the accuracy and stability of the recognition.  
+
+## Human Pose Estimation
+
+1.  CPM  
+&emsp;When the human body is not in the middle of the screen, it is completely unrecognizable. The reason is that the CPM algorithm model has a prerequisite: assume that the human body to be recognized is in the middle of the screen.  
+2.  DeeperCut
+3.  OpenPose  
+&emsp;Use convolutional neural networks to extract features to get feature maps, and then use CNN to extract partial confidence maps and partial region affinity, and then based on the extracted parts of the feature maps, use the binary matching algorithm model to distinguish different joints of different people and recognize The joint points are connected in the order of each person.  
+&emsp;Then, the resulting heat maps of the two lines are respectively calculated according to the positions of the joint points and the positions of the bones, which joints should be connected with the best effect, and a normal map is generated. Finally, determine which line should exist according to the calculated probability, and then use the minimum spanning tree algorithm to derive from this line, and then derive the entire human skeleton.  
+4.  Alphapose  
+&emsp;Symmetric spatial transformation network STN+SPPE+SDTN The first spatial transformation network can help adjust the human body posture, such as too large recognition frame, missing person recognition and other problems, it can try to transform the posture to a suitable position, so that the next single posture Identification can be more accurate. The inverse space transformation network in the tail will map the human body transformed by the space transformation network back to the original space.
