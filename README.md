@@ -1,5 +1,18 @@
 # Robust-3D-Human-Motion-Capture-Technology-based-on-2D-Videos
 
+## Code Note：
+1.  AlphaPose-pytorch is the first phase of this article. Specific environment configuration reference: https://github.com/MVIG-SJTU/AlphaPose
+2.  Run from the command line: ./run.sh --video examples/input.mp4 --outdir examples/results/ --vis --format cmu --sp --save_video Run the program in a single thread and get the result as json formatted motion Data and recognized video
+
+3.  Convert json format data to 14*2 mat format data using data.py in the data processing folder
+
+4.  Put mat format data and original pictures into 3DHumanPose-master imgs, run demo.m to get 3D motion data, and then use processings.m to denoise the data, generate each frame of denoised pictures and store as BVH format
+
+5.  Use MP4.m to generate the video in MP4 format
+
+
+
+
 ## Backgound
 1.  2D human pose estimation is a research hotspot in the field of computer vision 
 2.  Most human pose estimation is limited to the extraction of 2D poses, and the experimental results are not stable  
