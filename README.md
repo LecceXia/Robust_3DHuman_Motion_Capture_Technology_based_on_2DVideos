@@ -30,3 +30,5 @@
 
 ### Result  
 &emsp;Compared with the four existing 2D human pose recognition models, Openpose has a poor effect on human inverted pose detection; the detection requirement of the detector used by CPM is that the human body should be close to the middle of the screen, so the edge position detection effect is poor, and Alphapose shows excellent results when dealing with various situations. Comprehensive effect: Alphapose> DeeperCut> OpenPose> CPM.
+
+## Data Preprocessing and Data matching
