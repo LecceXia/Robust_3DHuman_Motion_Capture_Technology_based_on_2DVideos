@@ -1,5 +1,18 @@
 # Robust-3D-Human-Motion-Capture-Technology-based-on-2D-Videos
 
-&emsp;&emsp;First analyzes the existing four algorithms of 2D human pose recognition model, and compares the experimental results, selects the best algorithm model as the recognition model used in this paper. Then, the article uses the motion retargeting technique to compress the number of skeleton joint points, combine the 2D-3D data matching model and the compressed skeleton to calculate the position of the 3D human skeleton joint point. This process achieves the purpose of directly extracting 3D motion data from 2D video.  
-&emsp;&emsp;In addition, since the existing human pose estimation method rarely pays attention to longterm motion continuity, another focus of this topic is to use computer graphics to correct the continuity of motion. This paper first compares the existing four filtering algorithms, analyzes the experimental results, selects the optimal algorithm to optimize the 3D motion data, and stores the optimized data in BVH format.   
-&emsp;&emsp;The experimental results show that this method combining 2D human pose recognition model and 2D-3D data matching model to achieve the process of direct extraction of 3D human motion skeleton from 2D video is great, and the optimization of data eliminates most of the jitter. A smooth 3D human motion skeleton video can be obtained.
+## Backgound
+1.  2D human pose estimation is a research hotspot in the field of computer vision 
+2.  Most human pose estimation is limited to the extraction of 2D poses, and the experimental results are not stable  
+3.  Some scholars proposed to derive 3D pose based on data matching  
+------>Extract more stable 3D motion data directly from 2D video  
+
+## Challenge
+1.  How to construct an appropriate data set and compare the existing human pose estimation algorithms experimentally?  
+2.  How to build a bridge between 2D human pose estimation model and 2D-3D data matching model?  
+3.  How does the filtering algorithm used for data processing avoid losing key frames?  
+4.  How to use the position information to derive the rotation angle?  
+
+## DataSet
+&emsp;The data set used is divided into two parts. 
+1.  The first part is a series of short-length fitness exercises, including inverted push-ups, inverted wall-climbing, high-five push-ups, one-leg squats, forehand and backhand pull-ups, bobby jumps, and bending Mountain running, V-shaped heads, ground running, etc. These data basically include various special human postures, such as various occlusions, the human body is not in the center of the screen, the human body is in extensive contact with the ground, the human body is inverted, etc. .  
+2.  The second part is the dance movements with a long duration. Because the dance movements are complex and varied, sometimes the fans and ribbons are used to check the accuracy and stability of the recognition.  
